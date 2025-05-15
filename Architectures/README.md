@@ -1,21 +1,23 @@
 # Experiments for the Eulearn Dataset
-=====================================
+
+---------------
 
 ## Table of Contents
------------------
 
 1. [Description](#description)
 2. [Repository Structure](#repository-structure)
 3. [Usage](#usage)
 4. [Models](#models)
 
-## Description
 ---------------
+
+## Description
 
 This repository contains code for experiments on the Eulearn Dataset. The dataset can be loaded from pickle or stl formats. The code is organized into folders, each containing necessary scripts to replicate the experiments reported.
 
+---------------
+
 ## Repository Structure
-----------------------
 
 The repository is divided into the following folders:
 
@@ -23,8 +25,9 @@ The repository is divided into the following folders:
 	+ `train_eval.py`: Script to train and evaluate models with the dataset.
 	+ `dataset.py`: Script containing functions to open the dataset according to its format.
 
+---------------
+
 ## Usage
------
 
 To execute a model, run the following command:
 ```bash
@@ -38,8 +41,9 @@ Additional arguments include:
 * `--save`: Name to save the learning model
 * `--load_model`: Name of a previously saved model (if exists)
 
+---------------
+
 ## Models
--------
 
 The following deep learning models are used to test the Eulearn dataset:
 
