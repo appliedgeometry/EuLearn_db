@@ -4,9 +4,9 @@
 ## Table of Contents
 
 1. [Description](#description)
-2. [Repository Structure](#repository-structure)
-3. [Usage](#usage)
-4. [Models](#models)
+2. [Folder Structure](#folder-structure)
+3. [Models](#models)
+4. [Usage](#usage)
 
 
 ## Description
@@ -14,15 +14,13 @@
 This repository contains code for deep learning experiments on the **EuLearn dataset**. The dataset can be loaded from either `.pkl` or `.stl` formats. Code is organized into modular folders, each of which contains the necessary scripts to perform the reported experiments.
 
 
-## Repository Structure
+## Folder Structure
 
 Each model directory contains the following folder:
 
 - **`utils/`** — Supporting code, including the implementation of the `NoamOptimizer` and the definition of auxiliary layers for each model, and the following scripts:
   - `train_eval.py`: To train and evaluate the model.
   - `dataset.py`: To load the dataset according to its format.
-
-Each model script is located in the root or a model-specific folder, named `[model]_main.py`.
 
 
 ## Models
