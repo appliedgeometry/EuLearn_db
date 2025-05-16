@@ -45,7 +45,7 @@ So each model has a corresponding `[model]_main.py` script that runs the model.
 
 To train and test a model, run the following command:
 ```bash
-$ python [model]_main.py --data [folder with training data] --test_data [folder with test data]
+$ python [model]_main.py --data [folder with training data] --test_data [folder with testing data]
 ```
 Additional arguments include:
 
