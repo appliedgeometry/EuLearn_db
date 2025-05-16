@@ -44,14 +44,25 @@ So each model has a corresponding `[model]_main.py` script that runs the model.
 
 ## Usage
 
-To train and test a model, run the following command:
+To train and test a model, use:
 ```bash
-$ python [model]_main.py --data [folder with training data] --test_data [folder with testing data]
+python [model]_main.py --data [folder with training data] --test_data [folder with testing data]
 ```
 Additional arguments include:
 
+<!--
 * `--epochs`: Number of training epochs
 * `--dropout`: Dropout rate
 * `--d_model`: Model dimensionality
 * `--save`: Output name for saving the trained model
 * `--load_model`: Input name to load a previously saved model to evaluate or resume training
+-->
+
+| Argument         | Description                                                  |
+|------------------|--------------------------------------------------------------|
+| `--epochs`       | Number of training epochs                                    |
+| `--dropout`      | Dropout rate                                                 |
+| `--d_model`      | Model dimensionality                                         |
+| `--save`         | Output name for saving the trained model                     |
+| `--load_model`   | Input name to load a previously saved model for evaluation or resuming training |
+
