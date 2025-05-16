@@ -1,6 +1,6 @@
 # Experiments on the EuLearn Dataset
 
-
+<!--
 ## Table of Contents
 
 1. [Description](#description)
@@ -8,19 +8,20 @@
 3. [Models](#models)
 4. [Usage](#usage)
 
-
 ## Description
+-->
 
 This repository contains code for deep learning experiments on the **EuLearn dataset**. The dataset can be loaded from either `.pkl` or `.stl` formats. Code is organized into modular folders, each of which contains the necessary scripts to perform the reported experiments.
 
 
 ## Folder Structure
 
-Each model directory contains the following folder:
+There are three types of models: __attention__, __convolutional__ and __PointNet__-based models, each of which is contained in the corresponding folder.
 
-- **`utils/`** — Supporting code, including the implementation of the `NoamOptimizer` and the definition of auxiliary layers for each model, and the following scripts:
-  - `train_eval.py`: To train and evaluate the model.
-  - `dataset.py`: To load the dataset according to its format.
+The **`utils/`** folder contains the following supporting scripts:
+- `utils.py` — Includes the implementation of the `NoamOptimizer`, the definition of auxiliary layers for each model, and a function to `visualize` the sampled vertices in a connected graph.
+- `train_eval.py`: To train and evaluate the model.
+- `dataset.py`: To load the dataset according to its format.
 
 
 ## Models
