@@ -8,20 +8,17 @@ class Attention(nn.Module):
     """Common attention module"""
     def __init__(self, input_size, d_model, bias=True):
         super(Attention, self).__init__()
-        self.V  = nn.Linear(input_size, d_model, bias=bias)
-        
+        self.V = nn.Linear(input_size, d_model, bias=bias)
         self.d_model = d_model
         
     def forward(self, x, adj):       
         value = self.V(x)
-        
         scores = torch.matmul(x, x.T)/sqrt(self.d_model)
         scores = scores.masked_fill(adj == 0, -1e9)
         p_attn = nn.functional.softmax(scores, dim = -1)
         Vs = torch.matmul(p_attn, value)
-        
-        return Vs, p_attn    
-        
+        return Vs, p_attn
+
         
 class GraphAttention(nn.Module):
     """Complete model"""
