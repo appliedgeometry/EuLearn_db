@@ -1,19 +1,19 @@
 import torch
 import torch.nn as nn
 from pointnetpp import PointNetPlusPlus
-from train_eval import train_adj_model, eval_adj_model
-from dataset import get_sampled_pointclouds, get_surfaces
+from utils.train_eval import train_adj_model, eval_adj_model
+from utils.dataset import get_sampled_pointclouds, get_surfaces
 from argparse import ArgumentParser
 
 parser = ArgumentParser()
-parser.add_argument("--data", help="Name of files",default='train')
-parser.add_argument("--test_data", help="Name of files",default='test')
-parser.add_argument("--sample_size", help="Numner of data if sample=True",default=250)
+parser.add_argument("--data", help="Name of training data folder",default='train')
+parser.add_argument("--test_data", help="Name of testing data folder",default='test')
+parser.add_argument("--sample_size", help="Number of data if sample=True",default=250)
 parser.add_argument("--test_file", help="Name of eval files",default='results_p++.txt')
 parser.add_argument("--epochs", help="Size of sample of points",default=10000)
 parser.add_argument("--save", help="File to save model", default='pointnetpp.model')
 parser.add_argument("--load", help="File to load a model", default=None)
-parser.add_argument("--dropout", help="File to load a model", default=0.3)
+parser.add_argument("--dropout", help="Dropout rate", default=0.3)
 parser.add_argument("--d_model", help="Dimension of the model", default=512)
 parser.add_argument("--load_model", help="Name of previous trained model", default='pointnetpp.model')
 parser.add_argument("--num_clases", help="Total number of expected classes", default=11)

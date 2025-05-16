@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from utils import NoamOptimizer
+from utils.utils import NoamOptimizer
 from sklearn.metrics import classification_report
 from tqdm import tqdm
 

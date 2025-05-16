@@ -45,12 +45,12 @@ def farthest_point_sample(xyz:torch.tensor, npoint:int) -> torch.tensor:
 def query_ball_point(radius:float, nsample:int, xyz:torch.tensor, new_xyz:torch.tensor) -> torch.tensor:
     """ Regresa índices de puntos (tantos como en new_xyz) con nsample agrupados con base a radius"""
     device = xyz.device # device
-    B, N, C = xyz.shape # tamaño 
+    B, N, C = xyz.shape # tamaño
     _, S, _ = new_xyz.shape # número de puntos en new
     group_idx = torch.arange(N, dtype=torch.long).to(device).view(1, 1, N).repeat([B, S, 1])
     sqrdists = square_distance(new_xyz, xyz) # Obtiene distancias entre new y los datos de entrada x
     # Agrupa puntos con base a la distancia de un radio^2 determinado
-    group_idx[sqrdists > radius**2] = N 
+    group_idx[sqrdists > radius**2] = N
     group_idx = group_idx.sort(dim=-1)[0][:, :, :nsample]
     group_first = group_idx[:, :, 0].view(B, S, 1).repeat([1, 1, nsample])
     mask = group_idx == N

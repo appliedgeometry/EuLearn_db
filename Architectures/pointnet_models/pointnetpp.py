@@ -67,15 +67,15 @@ class PointNetPlusPlus(nn.Module):
         x = l3_points.view(B, self.dim)
         h1 = self.drop1(self.ffw1(x))
         out = self.ffw2(h1)
-        
+
         return out[0]
 
 
 def get_data(file, device='cpu'):
-    x, _ = load(open(file, 'rb')) 
+    x, _ = load(open(file, 'rb'))
     x = torch.tensor(x, dtype=torch.float32).to(device)
     N,C = x.shape
-    
+
     return x.view(1,N,C)
 
 def get_dataset(directory, device='cpu'):
@@ -85,5 +85,5 @@ def get_dataset(directory, device='cpu'):
         files = glob(subdir+'/*')
         x += files
         y += [int(subdir[-1])]*len(files)
-		
+
     return x, torch.tensor(y).to(device)
