@@ -2,4 +2,4 @@
 
 This repo contains the benchmark deep learning architectures that were trained and evaluated on the following database:
 
-[EuLearn: A 3D database for learning Euler characteristics]([https://github.com/appliedgeometry/Eulearn](https://huggingface.co/datasets/appliedgeometry/EuLearn))
+[EuLearn: A 3D database for learning Euler characteristics](https://github.com/appliedgeometry/Eulearn](https://huggingface.co/datasets/appliedgeometry/EuLearn)
