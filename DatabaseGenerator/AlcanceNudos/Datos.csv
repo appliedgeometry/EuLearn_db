@@ -1,0 +1,2 @@
+knot_type,n_x,n_y,n_z,phi_x,phi_y,phi_z,min_reach,max_reach,bars_list
+lissajous,2,3,5,0,0,1.0471975511965976,0.01370512,0.13216461,[]
