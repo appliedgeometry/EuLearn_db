@@ -1,0 +1,10 @@
+python-dev-tools
+setuptools
+numpy
+numpy-stl
+sympy
+scipy
+tqdm
+trimesh
+scikit-image
+pycuda
