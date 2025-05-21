@@ -1,0 +1,63 @@
+#############################
+# Eulearn config
+#############################
+show_progress=True
+max_STL_vertices=250
+knot_nodes=500
+boundingbox_offset=5
+min_voxels_per_Axis=90
+voxel_activation_distance_scale=1.0
+#voxel_activation_distance_scale=1.732050807569
+#############################
+#	METHODS
+#############################
+#method=minimal
+#____________________________
+#method=manual
+#r_neighborhood=0.1
+#____________________________
+method=sinusoidal
+sine_const=1.0
+sine_amp=0.1
+sine_freq=1
+sine_phase=0
+#sine_phase='pi/2'
+#____________________________
+#method=automatic
+#automatic_submethod=reach
+#reach_iterations=2
+#reach_threshold=1e-16
+#arclength_tolerance=0.01
+###############################
+#	System Config
+###############################
+blocks_per_batch=10
+overwrite=True
+output_dir='outputs/output01'
+log_file='output01.log'
+ascii_filenames=True
+blender_route='../blender-3.5.0-linux-x64/'
+#blender_route='../blender-4.1.1-linux-x64/'
+reach_scripts='./AlcanceNudos/'
+name_format='index,type,parameters,Nbars,Nvoxels,vxRes_f1.4,rmin_f1.4,rmax_f1.4,ravg_f1.4,method,rch_its'
+#name_format='type,parameters,rmin_f1.3,rmax_f1.3,Nvoxels,sineconst_f1.3,sineamp_f1.3,sinefreq_f1.3,sinephase'
+#name_format='type,parameters,sinefreq_f1.0,sineconst_f1.3,sineamp_f1.3,rmin_f1.3,rmax_f1.3,Nvoxels'
+##############################
+#	Select Processes
+##############################
+compute_maxblowup=True
+pump=True
+marchingQ=True
+merge_STL=True
+fix_normals_STL=True
+#############################
+#Blender Post-Processing 
+#(Only if fix_normals_STL output exists)
+#############################
+scale=True
+translate_to_origin=True
+smooth=True
+smooth_factor=0.25
+smooth_iterations=25
+generate_summary=True
+#(generate_summary requires Post-Processing output)
