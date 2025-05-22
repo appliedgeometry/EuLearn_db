@@ -9,7 +9,7 @@ cat sampling_part_* > sampling.tar.xz
 Once assembled, you can extract the contents with:
 
 ```
-tar -xvf sampled.tar.xz
+tar -xvf sampling.tar.xz
 ```
 
 This will produce a directory containing 11 .tar.gz files, each corresponding to sampled point clouds grouped and compressed (tar.gz) by genus.
