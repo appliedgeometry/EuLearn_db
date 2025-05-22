@@ -319,7 +319,8 @@ def filename_format(x,knot_index,par_dictionary,fields_dir):
 				if total_chars=="0":
 					dot_index=sine_amp_str.find(".")
 					sine_amp=sine_amp_str=sine_amp_str[dot_index+1:]
-				name_dict[elem]="±"+sine_amp_str
+				#name_dict[elem]="±"+sine_amp_str
+				name_dict[elem]=""+sine_amp_str
 			elif 'sinefreq' in elem and metaparameter_method['method']=='sinusoidal':
 				fmt_digits=elem.split("_f")[1]
 				total_chars,decimals=fmt_digits.split(".")

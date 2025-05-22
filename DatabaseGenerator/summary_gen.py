@@ -218,7 +218,8 @@ for key in dictionaries["genus"].keys():
 	stl_original=os.path.join(copy_from,name+".stl")
 
 	#shutil.copy(stl_original,os.path.join(save_path,stl_name) )
-	shutil.copy(stl_original,os.path.join(save_path,stl_name[:-4]+"_a"+str(dictionaries["area"][knot_index])+".stl") )
+	#shutil.copy(stl_original,os.path.join(save_path,stl_name[:-4]+"_a"+str(dictionaries["area"][knot_index])+".stl") )
+	shutil.copy(stl_original,os.path.join(save_path,stl_name[:-4]+".stl") )
 
 	# Copy other files with same name
 	scfields=os.listdir(scalarfields_dir)
@@ -240,4 +241,5 @@ for key in dictionaries["genus"].keys():
 		if stl3d in stl_name:
 			#fn=os.listdir(os.path.join(scalarfields_dir,dir_flds))[0]
 			fn=os.path.join(nsmooth_dir,stl3d)
-			shutil.copy(fn,os.path.join(save_path,stl_name[:-4]+"_a"+str(dictionaries["ns_area"][knot_index])+"_ns.stl") )
+			#shutil.copy(fn,os.path.join(save_path,stl_name[:-4]+"_a"+str(dictionaries["ns_area"][knot_index])+"_ns.stl") )
+			shutil.copy(fn,os.path.join(save_path,stl_name[:-4]+"_ns.stl") )
