@@ -12,9 +12,9 @@ Once assembled, you can extract the contents with:
 tar -xvf sampling.tar.xz
 ```
 
-This will produce a directory containing 11 .tar.gz files, each corresponding to sampled point clouds grouped and compressed (tar.gz) by genus.
+This will produce a directory containing 11 `.tar.gz` files, each corresponding to sampled point clouds grouped and compressed (tar.gz) by genus.
 
-**Remark**: Before extracting each .tar.gz file, ensure your machine has sufficient free space to store the uncompressed samples. To this end, consider the following example to estimate the extracted size:
+**Remark**: Before extracting each `.tar.gz` file, ensure your machine has sufficient free space to store the uncompressed samples. To this end, consider the following example to estimate the extracted size:
 
 ```
 gzip -l sampled_g0_complete.tar.gz
