@@ -10,7 +10,8 @@
 ## Description
 -->
 
-This repository contains code for deep learning experiments on the **EuLearn dataset**. The dataset can be loaded from either `.pkl` or `.stl` formats. Code is organized into modular folders, each of which contains the necessary scripts to perform the reported experiments.
+This folder contains deep learning models that were trained and evaluated with the **EuLearn dataset**. The dataset can be loaded from either `.pkl` or `.stl` formats. 
+The code is organized in modular folders, each of which contains the necessary scripts to perform the reported experiments.
 
 
 ## Models
