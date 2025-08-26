@@ -4,9 +4,8 @@
 ## Table of Contents
 
 1. [Description](#description)
-2. [Folder Structure](#folder-structure)
-3. [Models](#models)
-4. [Usage](#usage)
+2. [Models](#models)
+3. [Usage](#usage)
 
 ## Description
 -->
@@ -14,24 +13,15 @@
 This repository contains code for deep learning experiments on the **EuLearn dataset**. The dataset can be loaded from either `.pkl` or `.stl` formats. Code is organized into modular folders, each of which contains the necessary scripts to perform the reported experiments.
 
 
-## Folder Structure
+## Models
 
-We include three types of models: 
+We worked with three types of models: 
 
   1. __Attentional__
   2. __Convolutional__
   3. __PointNet-based__
 
-The `utils/` folder provides shared utilities and includes the following scripts:
-
-- `dataset.py` — Loads the dataset based on its format (`.pkl` or `.stl`).
-- `train_eval.py` — Contains training and evaluation logic for all models.
-- `utils.py` — Implements `NoamOptimizer`, the `LayerNorm` reusable component, and a function to `visualize` sampled vertices as a connected graph.
-
-
-## Models
-
-The following models have been trained and evaluated with the EuLearn dataset:
+The following models were trained and evaluated with the EuLearn dataset:
 
 | Model                              | Description                           | Script                 | 
 | ---------------------------------- | ------------------------------------- | ---------------------- |
@@ -43,8 +33,17 @@ The following models have been trained and evaluated with the EuLearn dataset:
 | PointNet++                         | Hierarchical PointNet                 | `pointnetpp_main.py`   |
 | Graph Sampled PointNet (**ours**)  | Combines PointNet with graph sampling | `gs_pointnet_main.py`  |
 
-Run the `[model]_main.py` script to train the model.
+The `utils/` folder provides shared utilities:
 
+- `dataset.py` — Loads the dataset based on its format (`.pkl` or `.stl`).
+- `train_eval.py` — Contains training and evaluation logic for all models.
+- `utils.py` — Includes `NoamOptimizer`, a `LayerNorm` reusable component, and a function to `visualize` the sampled vertices as a connected graph.
+
+The `utils/` folder can be copied into the root folder (i.e. `attention_models`, `conv_models`, or `pointnet_models`), so the `[model]_main.py` imports have to be modified as:
+```
+from utils.train_eval import train_adj_model, eval_adj_model
+from utils.dataset import get_sampled_pointclouds, get_surfaces
+```
 
 ## Usage
 
