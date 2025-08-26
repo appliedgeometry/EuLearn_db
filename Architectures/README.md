@@ -41,15 +41,15 @@ The `utils/` folder provides shared utilities:
 
 The `utils/` folder can be copied into the root folder (i.e. `attention_models`, `conv_models`, or `pointnet_models`), so the `[model]_main.py` imports have to be modified as:
 ```
-from utils.train_eval import train_adj_model, eval_adj_model
-from utils.dataset import get_sampled_pointclouds, get_surfaces
+from utils.train_eval import train_model, eval_model, train_adj_model, eval_adj_model
+from utils.dataset import Dataset, get_data, get_field, get_point_cloud, get_sampled_pointclouds, get_surfaces
 ```
 
 ## Usage
 
 To train and test a model, from the root directory use:
 ```bash
-python [model]_main.py --data [folder with training data] --test_data [folder with testing data]
+python [model folder]/[model]_main.py --data [training data folder] --test_data [testing data folder]
 ```
 Additional arguments include:
 
@@ -61,11 +61,11 @@ Additional arguments include:
 * `--load_model`: Input name to load a previously saved model to evaluate or resume training
 -->
 
-| Argument         | Description                                                  |
-|------------------|--------------------------------------------------------------|
-| `--epochs`       | Number of training epochs                                    |
-| `--dropout`      | Dropout rate                                                 |
-| `--d_model`      | Model dimensionality                                         |
-| `--save`         | Output name for saving the trained model                     |
+| Argument         | Description                                                                     |
+|------------------|---------------------------------------------------------------------------------|
+| `--epochs`       | Number of training epochs                                                       |
+| `--dropout`      | Dropout rate                                                                    |
+| `--d_model`      | Model dimensionality                                                            |
+| `--save`         | Output name for saving the trained model                                        |
 | `--load_model`   | Input name to load a previously saved model for evaluation or resuming training |
 
