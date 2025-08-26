@@ -31,7 +31,7 @@ The `utils/` folder provides shared utilities and includes the following scripts
 
 ## Models
 
-The following models have been evaluated on the EuLearn dataset:
+The following models have been trained and evaluated with the EuLearn dataset:
 
 | Model                              | Description                           | Script                 | 
 | ---------------------------------- | ------------------------------------- | ---------------------- |
@@ -48,7 +48,7 @@ Run the `[model]_main.py` script to train the model.
 
 ## Usage
 
-To train and test a model, use:
+To train and test a model, from the root directory use:
 ```bash
 python [model]_main.py --data [folder with training data] --test_data [folder with testing data]
 ```
