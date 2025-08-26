@@ -1,16 +1,13 @@
 # EuLearn Dataset Model Training
 
-## Table of Contents
-
-1. [Description](#description)
-2. [Models](#models)
-3. [Usage](#usage)
-
-
-## Description
-
 This folder contains deep learning models that were trained and evaluated with the **EuLearn dataset**. The dataset can be loaded from either `.pkl` or `.stl` formats. 
 The code is organized in modular folders, each of which contains the necessary scripts to perform the reported experiments.
+
+
+## Table of Contents
+
+1. [Models](#models)
+2. [Usage](#usage)
 
 
 ## Models
