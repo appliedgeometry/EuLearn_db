@@ -1,14 +1,13 @@
 # EuLearn Dataset Model Training
 
-<!--
 ## Table of Contents
 
 1. [Description](#description)
 2. [Models](#models)
 3. [Usage](#usage)
 
+
 ## Description
--->
 
 This folder contains deep learning models that were trained and evaluated with the **EuLearn dataset**. The dataset can be loaded from either `.pkl` or `.stl` formats. 
 The code is organized in modular folders, each of which contains the necessary scripts to perform the reported experiments.
@@ -40,7 +39,7 @@ The `utils/` folder provides shared utilities:
 - `train_eval.py` — Contains training and evaluation logic for all models.
 - `utils.py` — Includes `NoamOptimizer`, a `LayerNorm` reusable component, and a function to `visualize` the sampled vertices as a connected graph.
 
-Replace `from train_eval import ...` and `from dataset import ... ` at `[model]_main.py` for:
+In `[model]_main.py`, replace `from train_eval import ...` and `from dataset import ... ` for:
 ```
 import sys
 import os
@@ -48,6 +47,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.train_eval import train_model, eval_model, train_adj_model, eval_adj_model
 from utils.dataset import Dataset, get_data, get_field, get_point_cloud, get_sampled_pointclouds, get_surfaces
 ```
+
 
 ## Usage
 
@@ -72,4 +72,3 @@ Additional arguments include:
 | `--d_model`      | Model dimensionality                                                            |
 | `--save`         | Output name for saving the trained model                                        |
 | `--load_model`   | Input name to load a previously saved model for evaluation or resuming training |
-
