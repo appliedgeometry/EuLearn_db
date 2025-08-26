@@ -1,9 +1,13 @@
 import torch
 import torch.nn as nn
 from dgcnn import DGCNN
-from train_eval import train_adj_model, eval_adj_model
-from dataset import get_sampled_pointclouds, get_surfaces
 from argparse import ArgumentParser
+
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from utils.train_eval import train_adj_model, eval_adj_model
+from utils.dataset import get_sampled_pointclouds, get_surfaces
 
 parser = ArgumentParser()
 parser.add_argument("--data", help="Name of files",default='train')
