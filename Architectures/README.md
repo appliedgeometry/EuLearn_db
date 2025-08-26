@@ -33,17 +33,17 @@ The `utils/` folder provides shared utilities and includes the following scripts
 
 The following models have been evaluated on the EuLearn dataset:
 
-| Model                              | Script                 | Notes                                 |
-| ---------------------------------- | ---------------------- | ------------------------------------- |
-| Classic Attention for 3D           | `attention_main.py`    | Multi-head self-attention on 3D inputs|
-| Graph Sampled Attention (**ours**) | `gs_attention_main.py` | Uses graph sampling                   |
-| Dynamic Graph CNN (DGCNN)          | `dgcnn_main.py`        | Popular for point clouds              |
-| Fourier Neural Operator (FNO)      | `fourier_main.py`      | Operator learning                     |
-| PointNet                           | `pointnet_main.py`     | Classic point cloud model             |
-| PointNet++                         | `pointnetpp_main.py`   | Hierarchical PointNet                 |
-| Graph Sampled PointNet (**ours**)  | `gs_pointnet_main.py`  | Combines PointNet with graph sampling |
+| Model                              | Description                           | Script                 | 
+| ---------------------------------- | ------------------------------------- | ---------------------- |
+| Classic Attention for 3D           | Multi-head self-attention on 3D inputs| `attention_main.py`    |
+| Graph Sampled Attention (**ours**) | Uses graph sampling                   | `gs_attention_main.py` |
+| Dynamic Graph CNN (DGCNN)          | Popular for point clouds              | `dgcnn_main.py`        |
+| Fourier Neural Operator (FNO)      | Operator learning                     | `fourier_main.py`      |
+| PointNet                           | Classic point cloud model             | `pointnet_main.py`     |
+| PointNet++                         | Hierarchical PointNet                 | `pointnetpp_main.py`   |
+| Graph Sampled PointNet (**ours**)  | Combines PointNet with graph sampling | `gs_pointnet_main.py`  |
 
-So each model has a corresponding `[model]_main.py` script that runs the model.
+Run the `[model]_main.py` script to train the model.
 
 
 ## Usage
