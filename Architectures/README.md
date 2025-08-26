@@ -39,7 +39,7 @@ The `utils/` folder provides shared utilities:
 - `train_eval.py` — Contains training and evaluation logic for all models.
 - `utils.py` — Includes `NoamOptimizer`, a `LayerNorm` reusable component, and a function to `visualize` the sampled vertices as a connected graph.
 
-In `[model]_main.py`, replace `from train_eval import ...` and `from dataset import ... ` for:
+In `[model]_main.py`, replace `from train_eval import ...` and `from dataset import ... ` with:
 ```
 import sys
 import os
