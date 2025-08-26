@@ -1,4 +1,4 @@
-# Experiments on the EuLearn Dataset
+# EuLearn Dataset Model Training
 
 <!--
 ## Table of Contents
