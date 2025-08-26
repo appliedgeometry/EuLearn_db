@@ -16,7 +16,11 @@ This repository contains code for deep learning experiments on the **EuLearn dat
 
 ## Folder Structure
 
-We include three types of models: __attention__, __convolutional__ and __PointNet-based__.
+We include three types of models: 
+
+  1. __Attentional__
+  2. __Convolutional__
+  3. __PointNet-based__
 
 The `utils/` folder provides shared utilities and includes the following scripts:
 
