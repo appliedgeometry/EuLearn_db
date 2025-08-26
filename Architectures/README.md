@@ -40,8 +40,11 @@ The `utils/` folder provides shared utilities:
 - `train_eval.py` — Contains training and evaluation logic for all models.
 - `utils.py` — Includes `NoamOptimizer`, a `LayerNorm` reusable component, and a function to `visualize` the sampled vertices as a connected graph.
 
-The `utils/` folder can be copied into the root folder (i.e. `attention_models`, `conv_models`, or `pointnet_models`), so the `[model]_main.py` imports have to be modified as:
+Replace `from train_eval import ...` and `from dataset import ... ` at `[model]_main.py` for:
 ```
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from utils.train_eval import train_model, eval_model, train_adj_model, eval_adj_model
 from utils.dataset import Dataset, get_data, get_field, get_point_cloud, get_sampled_pointclouds, get_surfaces
 ```
@@ -49,7 +52,7 @@ from utils.dataset import Dataset, get_data, get_field, get_point_cloud, get_sam
 ## Usage
 
 To train and test a model, from the root directory use:
-```bash
+```
 python [model folder]/[model]_main.py --data [training data folder] --test_data [testing data folder]
 ```
 Additional arguments include:
