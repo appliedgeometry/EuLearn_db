@@ -9,7 +9,13 @@
 </p>
 <br>
 
-This repo hosts the code to generate EuLearn surfaces and the geometric deep learning architectures that were trained and evaluated on the [EuLearn Dataset](https://huggingface.co/datasets/appliedgeometry/EuLearn)
+[![Paper](https://img.shields.io/badge/Paper-MLST-blue)](http://iopscience.iop.org/article/10.1088/2632-2153/ae622e)
+[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-green)](https://huggingface.co/datasets/appliedgeometry/EuLearn)
+[![License](https://img.shields.io/github/license/appliedgeometry/EuLearn_db)](https://github.com/appliedgeometry/EuLearn_db/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/appliedgeometry/EuLearn_db)](https://github.com/appliedgeometry/EuLearn_db/graphs/contributors)
+<br>
+
+This repo hosts the code to generate EuLearn surfaces and the geometric deep learning architectures that were trained and evaluated on the [EuLearn Dataset](https://huggingface.co/datasets/appliedgeometry/EuLearn).
 
 [Database Generator](DatabaseGenerator) contains the code used to generate EuLearn surfaces from scalar fields via the Marching Cubes algorithm.
 
