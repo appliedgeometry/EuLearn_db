@@ -1,4 +1,4 @@
-<h1 align="center">EuLearn</h1>
+<h1 align="center">EuLearn: a 3D database for learning Euler characteristics</h1>
 <br>
 
 <p align="center">
@@ -9,9 +9,9 @@
 </p>
 <br>
 
-This repo contains the code to generate EuLearn surfaces and the geometric deep learning architectures that were trained and evaluated on [EuLearn: a 3D database for learning Euler characteristics](https://huggingface.co/datasets/appliedgeometry/EuLearn)
+This repo hosts the code to generate EuLearn surfaces and the geometric deep learning architectures that were trained and evaluated on the [EuLearn Dataset](https://huggingface.co/datasets/appliedgeometry/EuLearn)
 
-[Database Generator](DatabaseGenerator) contains the software used to generate EuLearn surfaces from scalar fields via the Marching Cubes algorithm.
+[Database Generator](DatabaseGenerator) contains the code used to generate EuLearn surfaces from scalar fields via the Marching Cubes algorithm.
 
 [Architectures](Architectures) hosts the geometric deep learning models that perform implicit topological data analysis by learning topological invariants from geometric data.
 
