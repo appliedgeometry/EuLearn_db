@@ -11,7 +11,7 @@
 
 [![Paper](https://img.shields.io/badge/Paper-MLST-blue)](http://iopscience.iop.org/article/10.1088/2632-2153/ae622e)
 [![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-green)](https://huggingface.co/datasets/appliedgeometry/EuLearn)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/appliedgeometry/EuLearn/blob/main/Singular_Knots_Self-Intersections.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/appliedgeometry/EuLearn_db/blob/main/Singular_Knots_Self_Intersections.ipynb)
 [![License](https://img.shields.io/github/license/appliedgeometry/EuLearn_db)](https://github.com/appliedgeometry/EuLearn_db/blob/main/LICENSE)
 [![Contributors](https://img.shields.io/github/contributors/appliedgeometry/EuLearn_db)](https://github.com/appliedgeometry/EuLearn_db/graphs/contributors)
 <br>
